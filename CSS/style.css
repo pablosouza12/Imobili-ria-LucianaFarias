@@ -1,0 +1,72 @@
+/* ===== Tema: Luciana Farias Imobiliária =====
+   Azul anil da marca + amarelo caju como destaque, fundo azulado claro. */
+:root{
+  --anil:#0B2F6B; --anil-escuro:#071E47; --mare:#EEF3F7; --papel:#fff;
+  --tinta:#13233A; --suave:#5B6B80; --linha:#D7E0EA; --caju:#F2A93B; --zap:#1FA855;
+}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{overflow-x:hidden}
+html body{font-family:'Figtree',system-ui,sans-serif;background:var(--mare);color:var(--tinta);line-height:1.6}
+html body h1,html body h2,html body h3{font-family:'Bricolage Grotesque','Figtree',sans-serif;letter-spacing:-.02em;color:var(--anil-escuro)}
+:focus-visible{outline:3px solid var(--caju);outline-offset:2px}
+
+/* Cabeçalho */
+html body header{background:rgba(255,255,255,.92);border-bottom:1px solid var(--linha);box-shadow:none}
+html body header nav a:not([href="#contato"].bg-green-500){color:var(--tinta)}
+html body header nav a:hover{color:var(--anil)}
+html body header nav a.bg-green-500,html body .btn-zap{background:var(--zap);box-shadow:none}
+
+/* Hero */
+html body #hero{background:var(--anil-escuro)}
+html body #hero::after{content:"";position:absolute;inset:0;z-index:10;
+  background:linear-gradient(90deg,rgba(7,30,71,.92) 0%,rgba(7,30,71,.78) 45%,rgba(7,30,71,.15) 100%)}
+html body .hero-conteudo{padding-top:5rem;padding-bottom:5rem}
+html body .hero-conteudo h1{color:#fff;font-weight:800;font-size:clamp(2.5rem,6.5vw,5rem);line-height:1.02;max-width:14ch}
+html body .hero-conteudo p{color:#DCE6F3;font-size:1.15rem;max-width:46ch;margin:1.5rem 0 2.25rem}
+.hero-acoes{display:flex;flex-wrap:wrap;gap:.9rem}
+.btn-primario,.btn-secundario{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;padding:.95rem 1.6rem;border-radius:999px;transition:transform .2s,background .2s}
+.btn-primario{background:var(--caju);color:var(--anil-escuro)}
+.btn-primario:hover{background:#f7bb5f}
+.btn-secundario{border:2px solid rgba(255,255,255,.6);color:#fff}
+.btn-secundario:hover{background:rgba(255,255,255,.12)}
+
+/* Imóveis */
+html body #imoveis{background:var(--mare);padding-top:5rem}
+html body #imoveis h2{font-size:clamp(1.9rem,4vw,2.75rem);font-weight:800;color:var(--anil-escuro);text-align:left;max-width:1152px;margin-inline:auto}
+html body #filtro-cidade{border:1.5px solid var(--anil);background:#fff;box-shadow:none;color:var(--tinta)}
+.tab-btn{transition:all .25s ease;cursor:pointer;border-color:var(--anil)!important}
+.active-tab{background:var(--anil)!important;color:#fff!important}
+.inactive-tab{background:transparent;color:var(--anil)}
+.inactive-tab:hover{background:#fff}
+html body #tab-solta{border-color:var(--caju)!important}
+html body #tab-solta.active-tab{background:var(--caju)!important;color:var(--anil-escuro)!important}
+
+html body .card-imovel{background:var(--papel);border:1px solid var(--linha);border-radius:18px;box-shadow:none;transition:opacity .4s ease,transform .25s ease,border-color .25s}
+html body .card-imovel:hover{border-color:var(--anil);transform:translateY(-3px);box-shadow:none}
+html body .card-imovel>div:first-child{height:15rem;overflow:hidden}
+html body .card-imovel>div:first-child img{transition:transform .5s ease}
+html body .card-imovel:hover>div:first-child img{transform:scale(1.04)}
+html body .card-imovel span.absolute{border-radius:999px;padding:.3rem .8rem;box-shadow:none;font-weight:700}
+html body .card-imovel span.bg-blue-600{background:var(--anil)}
+html body .card-imovel span.bg-amber-500{background:var(--caju);color:var(--anil-escuro)}
+html body .card-imovel h3{font-size:1.3rem;font-weight:800;color:var(--anil-escuro);line-height:1.2}
+html body .card-imovel p.text-blue-500{color:var(--suave);font-weight:600}
+html body .card-imovel p.text-gray-500{color:var(--suave)}
+html body .card-imovel p.text-2xl{color:var(--anil);font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.75rem;letter-spacing:-.02em}
+html body .card-imovel a.bg-gray-100{background:var(--mare);color:var(--anil);border-radius:999px;padding:.7rem}
+html body .card-imovel a.bg-gray-100:hover{background:var(--anil);color:#fff}
+
+/* Contato */
+html body #contato{background:var(--anil);color:#fff}
+html body #contato h2{color:#fff;font-size:clamp(1.9rem,4vw,2.5rem);font-weight:800}
+html body #contato .text-gray-600,html body #contato .text-gray-700{color:#DCE6F3}
+html body #contato .fa-map-marker-alt{color:var(--caju)}
+html body #contato .bg-gray-50{background:#213b47;border-radius:18px;box-shadow:none;color:var(--tinta)}
+html body #contato label{color:var(--tinta);font-weight:600}
+html body #contato input,html body #contato select{border:1.5px solid var(--linha);border-radius:10px;padding:.7rem 1rem}
+html body #contato input:focus,html body #contato select:focus{border-color:var(--anil)}
+html body #contato button[type=submit]{background:var(--zap);border-radius:999px;padding:.95rem}
+html body #contato button[type=submit]:hover{background:#17924A}
+
+html body footer{background:var(--anil-escuro)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
